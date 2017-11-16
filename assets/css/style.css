@@ -1,0 +1,35 @@
+body, html {
+	display: block;
+	height: 100%;
+    margin: 0;
+    color: #fff;
+
+}
+
+.bg-img {
+	background-image: url(../images/futurama-bkgd.jpg);
+	height: 100%;
+	position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron {
+	background-color: transparent;
+	color: #fff;
+}
+
+.panel-default {
+	border: 1px solid #fff;
+	background-color: transparent;
+}
+
+.panel-body {
+}
+
+/* Turn this off at the end 
+div {
+	border: 1px solid white;
+}
+*/
