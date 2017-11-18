@@ -14,47 +14,47 @@ var wordArray = [
 	"zapp",
 	"scruffy"]
 
-var word = wordArray[Math.floor(Math.random()*wordArray.length)];
+var word = "";
 
 // display length of the answer to the user with "_"
 var answerArray = [];
 
-for (var i = 0; i < word.length; i++) {
-	answerArray[i] = "_";
-}
 
+function init() {
+	word = wordArray[Math.floor(Math.random()*wordArray.length)];
+	for (var i = 0; i < word.length; i++) {
+	answerArray[i] = "_";
+	}
+}
+init()
 // this will keep track of letters left to be guessed
 var remainingLetters = word.length;
-
 var targetDiv = document.getElementById("hangmanWord");
 
       var newDiv = document.createElement("div");
       newDiv.innerHTML = answerArray.join(" ");
       targetDiv.appendChild(newDiv);
-      var userText = document.getElementById("user-text");
 
-      // Next, we give JavaScript a function to execute when onkeyup event fires.
+var userText = document.getElementById("userGuess");
       document.onkeyup = function(event) {
         userText.textContent = event.key;
       };
 
-	// this is the Game loop
-/* while (remainingLetters > 0) {
-	// game code goes here
+var i = 0
+for (var i = 0; i < word.length; i++) {
+		if (word[i] === userText) {
+			answerArray[i] = userText;
+		} else {
+			answerArray[i] = answerArray[i];
+		};
 
-	// show the player thier progress
-
-	//take input from the player
-
-	// update answerArray and remainigLetters for every correct guess
 }
-// console.log(wordArray)
-// console.log(word)
-// console.log(word.length)
 
 
+    console.log(word)
+    console.log(answerArray[i])
 
-
+         
 
 /* # generate a word at random and store it in a variable
 # display the length of the word to the user

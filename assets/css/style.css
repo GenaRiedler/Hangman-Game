@@ -21,11 +21,12 @@ body, html {
 }
 
 .panel-default {
-	border: 1px solid #fff;
-	background-color: transparent;
+	border: 1px solid blue;
+	background-color: white;
 }
 
 .panel-body {
+	color: black;
 }
 
 /* Turn this off at the end 
